@@ -1,0 +1,58 @@
+/* ==========================================================
+   Responsive adjustments (mobile-first, min-width queries)
+   Tested widths: 360, 375, 390, 768, 1024, 1440
+   ========================================================== */
+
+/* Very small phones */
+@media (max-width: 380px) {
+  .hero { padding-inline: 1rem; }
+  .event-card,
+  .family-card { padding-inline: 1rem; }
+  .count-card__label { letter-spacing: 0.15em; }
+  .poster-btn__hint { font-size: 0.7rem; }
+}
+
+/* Keep decorative florals clear of the text on phones */
+@media (max-width: 575.98px) {
+  .floral-corner { opacity: 0.55; }
+  .floral-corner--small { opacity: 0.4; }
+  .hero__content { padding-inline: 0.25rem; }
+  .site-nav .navbar-collapse { padding-bottom: 0.75rem; }
+}
+
+/* Tablets and up */
+@media (min-width: 576px) {
+  .count-grid { grid-template-columns: repeat(4, 1fr); gap: 1.1rem; }
+}
+
+@media (min-width: 768px) {
+  .section { padding: 6rem 0; }
+  .event-card,
+  .family-card { padding: 3rem 2rem; }
+
+  .venue-card { grid-template-columns: 1fr 1.25fr; }
+  .venue-card__info { padding: 3rem 2rem; }
+
+  .hero__names { gap: 0.25rem; }
+
+  /* collapsed menu becomes inline: restore transparent nav look */
+  .site-nav__link { padding: 0.5rem 0.9rem !important; }
+}
+
+/* Laptops / desktops */
+@media (min-width: 1024px) {
+  .hero__content { max-width: 880px; }
+  .event-card__title,
+  .family-card__title { font-size: 1.9rem; }
+}
+
+@media (min-width: 1440px) {
+  .section { padding: 7rem 0; }
+  .hero__script { font-size: 7.5rem; }
+}
+
+/* Short landscape phones: don't force a full-height hero */
+@media (max-height: 520px) and (orientation: landscape) {
+  .hero { min-height: auto; padding-top: 5.5rem; }
+  .hero__scroll { display: none; }
+}
