@@ -21,7 +21,7 @@ export const weddingData = {
       fullName: 'Nirmala S',
       aka: 'Flora',
     },
-    pairShort: 'Arun Kumar S & Nirmala',
+    pairShort: 'Arun Kumar S & Nirmala S',
   },
 
   verse: {
